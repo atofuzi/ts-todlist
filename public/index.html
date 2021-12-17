@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,38 @@
   <title>TodoList</title>
 </head>
 <body>
-  <h1>TodoList</h1>
+  <header class="header">
+    <h1 class="header__title">TodoList</h1>
+  </header>
+  <section>
+    <div class="todo-totalling">
+      <p class="todo-not-yet">未実施<span class="todo-not-yet__count">0</span></p>
+      <p class="todo-completion">完了<span class="todo-completion__count"> 0</span></p>
+    </div>
+  </section>
+  <section>
+    <div class="content">
+      <div class="todo-list">
+        <div class="todo-list__item">
+          <input class="todo-list__check" type="checkbox" name="" id=""><span class="todo-list__text">勉強する</span>
+          <button>削除</button>
+        </div>
+        <div class="todo-list__item">
+          <input class="todo-list__check" type="checkbox" name="" id=""><span class="todo-list__text">勉強する</span>
+          <button>削除</button>
+        </div>
+        <div class="todo-list__item">
+          <input class="todo-list__check" type="checkbox" name="" id=""><span class="todo-list__text">勉強する</span>
+          <button>削除</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="todo-register-area">
+      <input type="text">
+      <button>登録</button>
+    </div>
+  </section>
 </body>
 </html>
