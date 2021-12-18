@@ -20,26 +20,18 @@
   </section>
   <section>
     <div class="content">
-      <div class="todo-list">
+      <div id="todo-list" class="todo-list">
         <div class="todo-list__item">
           <input class="todo-list__check" type="checkbox" name="" id=""><span class="todo-list__text">勉強する</span>
-          <button>削除</button>
-        </div>
-        <div class="todo-list__item">
-          <input class="todo-list__check" type="checkbox" name="" id=""><span class="todo-list__text">勉強する</span>
-          <button>削除</button>
-        </div>
-        <div class="todo-list__item">
-          <input class="todo-list__check" type="checkbox" name="" id=""><span class="todo-list__text">勉強する</span>
-          <button>削除</button>
+          <button class="todo-list__delete-btn">削除</button>
         </div>
       </div>
     </div>
   </section>
   <section>
     <div class="todo-register-area">
-      <input type="text">
-      <button>登録</button>
+      <input id="js-input-task" class="todo-register-area__input" type="text" value="">
+      <button class="todo-register-area__button js-register">登録</button>
     </div>
   </section>
 </body>

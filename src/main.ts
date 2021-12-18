@@ -1,2 +1,18 @@
-const test: string = 'テスト';
-console.log(test);
+import { Todo } from "./todo";
+
+class RegisterTodo {
+  static register(): void {
+    const task = <HTMLInputElement>document.getElementById('js-input-task')
+    if(task.value){
+      console.log('登録します');
+      console.log(task.value);
+      new Todo(task.value);
+      task.value = '';
+    }
+  }
+}
+
+const btn = document.querySelector<HTMLButtonElement>('.js-register')
+if(btn) {
+  btn.addEventListener('click', RegisterTodo.register);
+}

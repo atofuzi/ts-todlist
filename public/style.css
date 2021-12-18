@@ -12,7 +12,7 @@ h1 {
   background: rgb(171,215,236);
   text-align: center;
   padding: 10px;
-  margin-bottom: 70px;
+  margin-bottom: 35px;
 }
 
 .content {
@@ -21,7 +21,7 @@ h1 {
   margin: 0 auto;
   padding: 25px;
   background: white;
-  border: 10px solid rgb(253,156,156);
+  border: 5px solid rgb(253,156,156);
   border-radius: 5px;
   color: rgb(91,91,91);
   box-sizing: border-box;
@@ -35,6 +35,11 @@ h1 {
   width: 600px;
   margin: 0 auto;
   padding: 25px;
+  text-align: center;
+}
+
+.todo-register-area__input{
+  width: 300px;
 }
 
 .todo-totalling {
