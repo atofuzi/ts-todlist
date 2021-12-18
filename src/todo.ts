@@ -1,4 +1,5 @@
 import { TodoList } from "./todoList";
+import { Library } from "./lib";
 
 interface Todoable {
   task: string;
@@ -35,7 +36,7 @@ export class Todo implements Todoable {
     // span要素を生成
     let span_element = <HTMLSpanElement>document.createElement('span');
     span_element.className = 'todo-list__text';
-    span_element.innerHTML = inputTask;
+    span_element.innerHTML = Library.sanitize(inputTask);
  
     // button要素を生成
     let btn_element = <HTMLButtonElement>document.createElement('button');
