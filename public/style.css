@@ -1,6 +1,6 @@
 body{
-  background: rgb(238,249,254);
   margin: 0;
+  background: rgb(238,249,254);
 }
 
 h1 {
@@ -9,47 +9,47 @@ h1 {
 }
 
 .header {
-  background: rgb(171,215,236);
-  text-align: center;
   padding: 10px;
   margin-bottom: 35px;
+  text-align: center;
+  background: rgb(171,215,236);
 }
 
 .content {
-  width: 600px;
-  min-height: 500px;
+  color: rgb(91,91,91);
   margin: 0 auto;
   padding: 25px;
-  background: white;
   border: 5px solid rgb(253,156,156);
   border-radius: 5px;
-  color: rgb(91,91,91);
+  width: 600px;
+  min-height: 500px;
   box-sizing: border-box;
+  background: white;
 }
 
 .todo-list__item {
   display: flex;
-  margin: 10px;
   padding-bottom: 2px;
+  margin: 10px;
   border-bottom: 1px dotted rgb(91,91,91);
   align-items: center;
 }
 
 .todo-list__delete-btn {
-  background-color: rgb(252, 207, 207);
   font-size: 12px;
-  border: none;
-  border-radius: 10px;
   padding: 1px 5px;
   margin-left: 10px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
   outline: none;
   appearance: none;
+  background: rgb(252, 207, 207);
 }
 .todo-register-area {
-  width: 600px;
-  margin: 0 auto;
   padding: 25px;
+  margin: 0 auto;
+  width: 600px;
   text-align: center;
 }
 
@@ -58,9 +58,9 @@ h1 {
 }
 
 .todo-totalling {
-  font-size: large;
-  color: rgb(91,91,91);
   display: flex;
+  color: rgb(91,91,91);
+  font-size: large;
   width: 600px;
   margin: 0 auto;
 }
@@ -71,25 +71,25 @@ h1 {
 
 .todo-not-yet__count {
   display: inline-block;
+  margin: 5px;
   width: 40px;
   height: 40px;
-  background-color:rgb(253,156,156);
-  vertical-align: middle;
   line-height: 40px;
-  text-align: center;
-  margin: 5px;
   border-radius: 40px;
+  vertical-align: middle;
+  text-align: center;
+  background:rgb(253,156,156);
 }
 
 
 .todo-completion__count {
   display: inline-block;
+  margin: 5px;
   width: 40px;
   height: 40px;
-  background-color:rgb(171,215,236);
-  vertical-align: middle;
   line-height: 40px;
-  text-align: center;
-  margin: 5px;
   border-radius: 40px;
+  text-align: center;
+  vertical-align: middle;
+  background:rgb(171,215,236);
 }
