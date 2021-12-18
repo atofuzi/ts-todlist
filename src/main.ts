@@ -1,4 +1,5 @@
 import { Todo } from "./todo";
+import { TodoList } from "./todoList";
 
 class RegisterTodo {
   static register(): void {
@@ -16,3 +17,5 @@ const btn = document.querySelector<HTMLButtonElement>('.js-register')
 if(btn) {
   btn.addEventListener('click', RegisterTodo.register);
 }
+
+const todoList = TodoList.getInstance();

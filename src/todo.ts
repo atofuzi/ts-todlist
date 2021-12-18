@@ -1,18 +1,23 @@
+import { TodoList } from "./todoList";
+
 interface Todoable {
   task: string;
   status: boolean;
   taskElement: HTMLDivElement;
+  todoList: TodoList;
   createTaskElement(inputTask: string): void;
   deleteTaskElement(): void;
-  completeTask(): void;
+  changeTaskStatus(): void;
 }
 
 export class Todo implements Todoable {
   task: string = '';
   taskElement: HTMLDivElement;
   status: boolean = false;
+  todoList: TodoList;
     constructor(initTask: string) {
       this.task = initTask;
+      this.todoList = TodoList.getInstance();
       const elt = this.createTaskElement(this.task);
       this.taskElement = elt;
     }
@@ -25,6 +30,7 @@ export class Todo implements Todoable {
     let input_element = <HTMLInputElement>document.createElement('input');
     input_element.className = 'todo-list__check';
     input_element.type = 'checkbox';
+    input_element.addEventListener('click', this.changeTaskStatus.bind(this));
 
     // span要素を生成
     let span_element = <HTMLSpanElement>document.createElement('span');
@@ -42,14 +48,16 @@ export class Todo implements Todoable {
     div_element.appendChild(btn_element);
 
     // 作成した要素を追加
-    let todoList = <HTMLDivElement>document.getElementById('todo-list');
-    todoList.appendChild(div_element);
+    let todoListElements = <HTMLDivElement>document.getElementById('todo-list');
+    todoListElements.appendChild(div_element);
+    this.todoList.updateTotaling();
     return div_element; 
   }
   deleteTaskElement() {
     this.taskElement.remove();
+    this.todoList.updateTotaling();
   }
-  completeTask() {
-
+  changeTaskStatus() {
+    this.todoList.updateTotaling();
   }
 }

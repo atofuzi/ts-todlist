@@ -35,9 +35,6 @@ h1 {
   align-items: center;
 }
 
-.todo-list__check {
-}
-
 .todo-list__delete-btn {
   background-color: rgb(252, 207, 207);
   font-size: 12px;
