@@ -28,9 +28,27 @@ h1 {
 }
 
 .todo-list__item {
+  display: flex;
   margin: 10px;
+  padding-bottom: 2px;
+  border-bottom: 1px dotted rgb(91,91,91);
+  align-items: center;
 }
 
+.todo-list__check {
+}
+
+.todo-list__delete-btn {
+  background-color: rgb(252, 207, 207);
+  font-size: 12px;
+  border: none;
+  border-radius: 10px;
+  padding: 1px 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
 .todo-register-area {
   width: 600px;
   margin: 0 auto;
