@@ -1,11 +1,10 @@
 import { TodoList } from "./todoList";
+import { Totaling } from "./totaling";
 import { Library } from "./lib";
 
 interface Todoable {
   task: string;
-  status: boolean;
   taskElement: HTMLDivElement;
-  todoList: TodoList;
   createTaskElement(inputTask: string): void;
   deleteTaskElement(): void;
   changeTaskStatus(): void;
@@ -14,11 +13,8 @@ interface Todoable {
 export class Todo implements Todoable {
   task: string = '';
   taskElement: HTMLDivElement;
-  status: boolean = false;
-  todoList: TodoList;
     constructor(initTask: string) {
       this.task = initTask;
-      this.todoList = TodoList.getInstance();
       const elt = this.createTaskElement(this.task);
       this.taskElement = elt;
     }
@@ -51,14 +47,14 @@ export class Todo implements Todoable {
     // 作成した要素を追加
     let todoListElements = <HTMLDivElement>document.getElementById('todo-list');
     todoListElements.appendChild(div_element);
-    this.todoList.updateTotaling();
+    Totaling.updateTotaling(TodoList.getTodoListElement());
     return div_element; 
   }
   deleteTaskElement() {
     this.taskElement.remove();
-    this.todoList.updateTotaling();
+    Totaling.updateTotaling(TodoList.getTodoListElement());
   }
   changeTaskStatus() {
-    this.todoList.updateTotaling();
+    Totaling.updateTotaling(TodoList.getTodoListElement());
   }
 }
